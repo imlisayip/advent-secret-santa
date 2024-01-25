@@ -1,5 +1,4 @@
-/* @import url('<https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Inter:wght@400;500;700&family=Kalam:wght@700&display=swap>'); */
-
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Inter:wght@400;500;700&family=Kalam:wght@700&display=swap');
 /**
 * START --- SETUP TAILWINDCSS EDIT
 *
@@ -15,21 +14,51 @@
  */
 
 @layer base {
-  svg {
-    @apply fill-current
+  label {
+    @apply font-handwriting text-xl uppercase tracking-tighter;
   }
 
+  label:has(+ input:placeholder-shown) {
+    @apply pointer-events-none absolute left-8 top-8 text-3xl transition-all duration-300;
+  }
+
+  label:has(+ input),
+  label:has(+ input):focus {
+    @apply absolute left-2 top-2 text-xl;
+  }
+
+  input[type='email'],
+  input[type='number'],
+  input[type='password'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='url'] {
+    @apply h-[100px] w-full border-2 border-black px-7 font-sans text-2xl;
+  }
+
+  /* invalid label */
+  label:has(+ input:invalid:not(:placeholder-shown)) {
+    @apply text-white
+  }
+
+  /* invalid input */
+
+  input:invalid:not(:placeholder-shown) {
+    @apply bg-orangeRed border-fireEngineRed
+  }
+  svg {
+    @apply fill-current;
+  }
 }
 
 @layer components {
   .indicator {
-    @apply center h-6 w-6 rounded-full border-2
+    @apply center h-6 w-6 rounded-full border-2;
   }
-
 }
 
 @layer utilities {
   .center {
-    @apply flex justify-center items-center
+    @apply flex items-center justify-center;
   }
 }

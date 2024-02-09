@@ -35,9 +35,9 @@ export const Check: Story = {
   },
 }
 
-export const Cheveron: Story = {
+export const Chevron: Story = {
   args: {
-    id: 'cheveron',
+    id: 'chevron',
   },
 }
 

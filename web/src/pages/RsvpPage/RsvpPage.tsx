@@ -9,7 +9,7 @@ const RsvpPage = () => {
       <Metadata title="RSVP" description="Rsvp page" />
       <HeadingWithRulers className="text-white" heading={'YOURE INVITED TO'} />
       <h1 className="page-title">SMITH CHRISTMAS</h1>
-      <h3 className="m-0 mb-10 font-handwriting uppercase uppercase leading-none text-white">
+      <h3 className="m-0 mb-10 font-handwriting uppercase leading-none text-white">
         December 23, 2023
       </h3>
       <div className="flex justify-center gap-10">
